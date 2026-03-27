@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html class="dark overflow-x-hidden" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>CRS INC. | ENGINEERED FOR PERMANENCE</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-[#0a0a0a] text-[#e4e2e1] font-body selection:bg-[#ff8c00] selection:text-black overflow-x-hidden max-w-[100vw]">
+
+<!-- Preloader -->
+<div id="preloader" class="fixed inset-0 z-[9999] bg-[#0a0a0a] flex items-center justify-center transition-opacity duration-700">
+  <div class="text-center">
+    <div class="text-5xl font-headline text-[#ff8c00] tracking-[0.3em] preloader-text">CRS</div>
+    <div class="h-[2px] bg-[#ff8c00]/30 mt-4 w-48 mx-auto overflow-hidden">
+      <div class="h-full bg-[#ff8c00] preloader-bar"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Grain Overlay -->
+<div class="grain-overlay"></div>
+
+<!-- Scroll Progress Bar -->
+<div id="scroll-progress" class="fixed top-0 left-0 h-[3px] bg-gradient-to-r from-[#ff8c00] to-[#ff6b00] z-[60] transition-all duration-150" style="width: 0%"></div>
+
+<!-- TopAppBar -->
+<header id="main-header" class="fixed top-0 w-full z-50 transition-all duration-500">
+  <div class="flex justify-between items-center w-full px-4 md:px-6 lg:px-12 py-4 md:py-5 max-w-none">
+    <a href="#home" class="text-2xl font-black tracking-[0.05em] text-[#ff8c00] font-headline hover:text-white transition-colors duration-300">
+      CRS INC.
+    </a>
+    <nav class="hidden md:flex items-center space-x-10">
+      <a class="nav-link active font-body tracking-wider text-xs uppercase font-semibold text-white relative" href="#home">Home</a>
+      <a class="nav-link font-body tracking-wider text-xs uppercase font-semibold text-[#888] hover:text-white transition-colors duration-300 relative" href="#services">Services</a>
+      <a class="nav-link font-body tracking-wider text-xs uppercase font-semibold text-[#888] hover:text-white transition-colors duration-300 relative" href="#why-us">Why Us</a>
+      <a class="nav-link font-body tracking-wider text-xs uppercase font-semibold text-[#888] hover:text-white transition-colors duration-300 relative" href="#about">About</a>
+      <a class="nav-link font-body tracking-wider text-xs uppercase font-semibold text-[#888] hover:text-white transition-colors duration-300 relative" href="#contact">Contact</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="tel:3606669654" class="hidden lg:flex items-center gap-2 text-[#ff8c00] text-xs font-semibold tracking-wider">
+        <span class="material-symbols-outlined text-sm">call</span>
+        (360) 666-9654
+      </a>
+      <button class="bg-[#ff8c00] text-black px-6 py-2.5 font-headline text-sm tracking-wider hover:bg-white hover:text-black transition-all duration-300 hidden md:block">
+        GET QUOTE
+      </button>
+      <!-- Mobile Menu Toggle -->
+      <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-[5px] w-7 group" aria-label="Toggle menu">
+        <span class="w-full h-[2px] bg-white transition-all duration-300 origin-center group-[.open]:rotate-45 group-[.open]:translate-y-[7px]"></span>
+        <span class="w-full h-[2px] bg-[#ff8c00] transition-all duration-300 group-[.open]:opacity-0"></span>
+        <span class="w-full h-[2px] bg-white transition-all duration-300 origin-center group-[.open]:rotate-[-45deg] group-[.open]:-translate-y-[7px]"></span>
+      </button>
+    </div>
+  </div>
+  <div class="h-[1px] w-full bg-gradient-to-r from-transparent via-[#ff8c00]/20 to-transparent"></div>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-[#0a0a0a]/98 backdrop-blur-xl flex items-center justify-center opacity-0 pointer-events-none transition-all duration-500">
+  <nav class="flex flex-col items-center gap-8">
+    <a class="font-headline text-4xl text-white hover:text-[#ff8c00] transition-colors" href="#home" data-mobile-link>HOME</a>
+    <a class="font-headline text-4xl text-white hover:text-[#ff8c00] transition-colors" href="#services" data-mobile-link>SERVICES</a>
+    <a class="font-headline text-4xl text-white hover:text-[#ff8c00] transition-colors" href="#why-us" data-mobile-link>WHY US</a>
+    <a class="font-headline text-4xl text-white hover:text-[#ff8c00] transition-colors" href="#about" data-mobile-link>ABOUT</a>
+    <a class="font-headline text-4xl text-white hover:text-[#ff8c00] transition-colors" href="#contact" data-mobile-link>CONTACT</a>
+    <a href="tel:3606669654" class="mt-4 bg-[#ff8c00] text-black px-8 py-3 font-headline text-lg tracking-wider">CALL NOW</a>
+  </nav>
+</div>
+
+<main class="overflow-x-hidden">
+<!-- Hero Section -->
+<section class="relative min-h-[100svh] flex items-center pt-16 md:pt-20 overflow-hidden" id="home">
+  <div class="absolute inset-0 z-0">
+    <img alt="Industrial steel beams and fabrication shop" class="w-full h-full object-cover opacity-30 grayscale contrast-125 scale-105 hero-parallax" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6ksUfG31Qb3fSRY26emeMyyjtxKTiuQ9ycd5WFLkxW0oRObiGxfj48ITwMO51PV67F5OrZY14YG0ZIhDxWR7FnNSxkar9R3vbmriXdn_bS40NO5FeADLxX60-df_jJpFjkMt4ZmasHE081WzI6TI3HqrODPzWCXpbfiAwzl_ezU5hfVNbCgniGMEziL5bm0Z4S-_p9hT8MIqNmbHCRvAg3S9S7y48D5r-y-Hlv-zwN_F5WpizkiKnRXpb2KFIXU_1BxVK_2K-ImPW"/>
+    <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-[#0a0a0a]/70"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-transparent to-transparent"></div>
+    <!-- Warm glow at bottom -->
+    <div class="absolute bottom-0 left-0 md:left-1/4 w-[300px] md:w-[600px] h-[200px] md:h-[300px] bg-[#ff8c00]/5 rounded-full blur-[120px]"></div>
+  </div>
+
+  <div class="relative z-10 px-5 md:px-24 w-full">
+    <div class="max-w-5xl">
+      <span class="reveal-up inline-flex items-center gap-3 mb-4 md:mb-8">
+        <span class="h-[1px] w-8 md:w-12 bg-[#ff8c00]"></span>
+        <span class="text-[#ff8c00] text-[10px] md:text-[11px] font-semibold tracking-[0.3em] md:tracking-[0.4em] uppercase font-body">Battle Ground, WA &bull; Since 1998</span>
+      </span>
+      <h1 class="reveal-up font-headline text-[clamp(2.8rem,11vw,9rem)] leading-[0.9] text-white mb-5 md:mb-8">
+        ENGINEERED<br/>FOR <span class="text-[#ff8c00] hero-glow">PERMANENCE.</span>
+      </h1>
+      <p class="reveal-up text-base md:text-xl text-[#999] max-w-2xl font-light leading-relaxed mb-8 md:mb-14 font-body">
+        Full-spectrum mechanical support and fabrication for those who build the world. From fleet maintenance to custom structural welding, we are your industrial backbone.
+      </p>
+      <div class="reveal-up flex flex-col sm:flex-row gap-3 md:gap-5">
+        <button class="group bg-[#ff8c00] text-black px-8 md:px-10 py-4 md:py-5 font-headline text-base md:text-lg tracking-wider hover:bg-white transition-all duration-300 flex items-center justify-center gap-3 relative overflow-hidden">
+          <span class="relative z-10">REQUEST SERVICE</span>
+          <span class="material-symbols-outlined text-lg relative z-10 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </button>
+        <button class="border border-[#333] text-white px-8 md:px-10 py-4 md:py-5 font-headline text-base md:text-lg tracking-wider hover:border-[#ff8c00] hover:text-[#ff8c00] transition-all duration-300">
+          VIEW CAPABILITIES
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Metric Block -->
+  <div class="absolute bottom-12 right-8 hidden lg:flex gap-1 reveal-right">
+    <div class="bg-[#141414] border border-[#222] p-6 text-center">
+      <p class="font-headline text-4xl text-white" data-counter="24">0</p>
+      <p class="text-[10px] tracking-[0.3em] text-[#ff8c00] uppercase font-body mt-1">/7 Response</p>
+    </div>
+    <div class="bg-[#141414] border border-[#222] p-6 text-center">
+      <p class="font-headline text-4xl text-white" data-counter="100">0</p>
+      <p class="text-[10px] tracking-[0.3em] text-[#ff8c00] uppercase font-body mt-1">% Certified</p>
+    </div>
+    <div class="bg-[#141414] border border-[#222] p-6 text-center">
+      <p class="font-headline text-4xl text-white" data-counter="25">0</p>
+      <p class="text-[10px] tracking-[0.3em] text-[#ff8c00] uppercase font-body mt-1">+ Years</p>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 opacity-50">
+    <span class="text-[9px] tracking-[0.4em] uppercase text-[#666] font-body">Scroll</span>
+    <div class="w-[1px] h-8 bg-gradient-to-b from-[#ff8c00] to-transparent scroll-bounce"></div>
+  </div>
+</section>
+
+<!-- Diagonal Divider -->
+<div class="section-divider hidden md:block"></div>
+
+<!-- Services Overview (Bento Grid) -->
+<section class="py-16 md:py-28 px-5 md:px-8 bg-[#0e0e0e]" id="services">
+  <div class="max-w-7xl mx-auto">
+    <div class="mb-10 md:mb-20 flex flex-col md:flex-row md:items-end justify-between gap-4 md:gap-8">
+      <div class="max-w-2xl reveal-up">
+        <span class="text-[#ff8c00] text-[11px] font-semibold tracking-[0.4em] uppercase font-body mb-3 md:mb-4 block">What We Do</span>
+        <h2 class="font-headline text-4xl md:text-7xl text-white mb-4 md:mb-6">INDUSTRIAL CAPABILITIES</h2>
+        <div class="h-[3px] w-24 bg-[#ff8c00]"></div>
+      </div>
+      <p class="reveal-up font-body text-xs tracking-wider text-[#666] uppercase max-w-xs md:text-right leading-loose">
+        Integrated mechanical solutions designed for maximum uptime and structural integrity.
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-4 h-auto md:h-[820px]">
+      <!-- Mobile Mechanic -->
+      <div class="reveal-up md:col-span-8 group relative overflow-hidden bg-[#151515] service-card cursor-pointer min-h-[280px] md:min-h-0">
+        <img alt="Mobile mechanic working on heavy machinery" class="absolute inset-0 w-full h-full object-cover opacity-40 grayscale group-hover:scale-110 group-hover:opacity-50 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0OT58cWlS3NNlwWE6pGadfld6-Lyxp3Xs1BeUzMdVcidWAm5qFpGuhHUT5hgIbMQQvIZDAu8lw5TRJiQUKBirPCO9qmSITHDZyqQDSMKwCOgYuCpIj-gckxNfSXyoTiRTdKxhrDYeTAgcQRCkFMoyJhfv26IBzgoTVJQeiTOZilJPfPDS9mlRQjukrnUMgDE-TZ0R4c50spJ-tU_xc-Cf6t3qigtgbHJp29G4jgwfV7FTfvlBg1OivROmlZU3XR7YsL7YCSWp2OyY"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/60 to-transparent"></div>
+        <div class="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500">
+          <span class="material-symbols-outlined text-[#ff8c00] text-3xl">arrow_outward</span>
+        </div>
+        <div class="absolute bottom-0 left-0 p-8 md:p-10">
+          <span class="text-[#ff8c00] font-body text-[10px] font-semibold tracking-[0.4em] uppercase mb-3 block">Field Support</span>
+          <h3 class="text-3xl md:text-4xl font-headline text-white mb-3">MOBILE MECHANIC</h3>
+          <p class="text-[#888] text-sm max-w-md font-body leading-relaxed">Equipment, Auto, and Heavy Trucks. Full-service field repair where you need it, when you need it.</p>
+          <div class="h-[2px] w-0 group-hover:w-16 bg-[#ff8c00] mt-4 transition-all duration-500"></div>
+        </div>
+      </div>
+      <!-- Lube Service -->
+      <div class="reveal-up md:col-span-4 bg-[#151515] p-6 md:p-10 flex flex-col justify-between gap-6 md:gap-0 border border-[#1e1e1e] service-card group cursor-pointer hover:border-[#ff8c00]/30 transition-all duration-500">
+        <div class="flex justify-between items-start">
+          <span class="material-symbols-outlined text-4xl md:text-5xl text-[#ff8c00]">oil_barrel</span>
+          <span class="material-symbols-outlined text-2xl text-[#333] group-hover:text-[#ff8c00] transition-colors duration-500">arrow_outward</span>
+        </div>
+        <div>
+          <h3 class="text-2xl font-headline text-white mb-3">MOBILE LUBE</h3>
+          <p class="text-[#777] text-sm font-body leading-relaxed mb-6">On-site preventative maintenance to extend machine life and reduce downtime.</p>
+          <a class="text-[#ff8c00] text-[10px] font-semibold uppercase tracking-[0.3em] flex items-center gap-2 font-body group/link" href="#">
+            Details <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_right_alt</span>
+          </a>
+        </div>
+      </div>
+      <!-- Automotive Shop -->
+      <div class="reveal-up md:col-span-4 bg-[#151515] p-6 md:p-10 flex flex-col justify-between gap-6 md:gap-0 border border-[#1e1e1e] service-card group cursor-pointer hover:border-[#ff8c00]/30 transition-all duration-500">
+        <div class="flex justify-between items-start">
+          <span class="material-symbols-outlined text-4xl md:text-5xl text-[#ff8c00]">precision_manufacturing</span>
+          <span class="material-symbols-outlined text-2xl text-[#333] group-hover:text-[#ff8c00] transition-colors duration-500">arrow_outward</span>
+        </div>
+        <div>
+          <h3 class="text-2xl font-headline text-white mb-3">AUTOMOTIVE SHOP</h3>
+          <p class="text-[#777] text-sm font-body leading-relaxed mb-6">Full-scale shop facilities for major overhauls and precision diagnostic repairs.</p>
+          <a class="text-[#ff8c00] text-[10px] font-semibold uppercase tracking-[0.3em] flex items-center gap-2 font-body group/link" href="#">
+            Details <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_right_alt</span>
+          </a>
+        </div>
+      </div>
+      <!-- Fabrication -->
+      <div class="reveal-up md:col-span-8 group relative overflow-hidden bg-[#151515] service-card cursor-pointer min-h-[280px] md:min-h-0">
+        <img alt="Welder working on custom metal fabrication" class="absolute inset-0 w-full h-full object-cover opacity-40 grayscale group-hover:scale-110 group-hover:opacity-50 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlXPQIVJ3SnXSayQSFC0TWdnER_x2qLfYUq9JW4eFEdPk2QRtPp3MR5j70wuFJnUIbHrl_vWako3O1rBtxS9vAZzybaf6LF93iY0Y0PowfeQ5o9U-MWDYpGNxtg6rEnC8brrMEbpxAji-gP2reEvWDidlCebXipznxFeb53rsWGtRllESbYzTo5sFl1z_XhnAS18gfLHgcZQS1RyNfrx5DAY_S4AcJRHPiuX62UYpDHRWot-f0ebE94d6RceQDFGWqkfyKKtruyL_-"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/60 to-transparent"></div>
+        <div class="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500">
+          <span class="material-symbols-outlined text-[#ff8c00] text-3xl">arrow_outward</span>
+        </div>
+        <div class="absolute bottom-0 left-0 p-8 md:p-10">
+          <span class="text-[#ff8c00] font-body text-[10px] font-semibold tracking-[0.4em] uppercase mb-3 block">Custom Engineering</span>
+          <h3 class="text-3xl md:text-4xl font-headline text-white mb-3">METAL FABRICATION</h3>
+          <p class="text-[#888] text-sm max-w-md font-body leading-relaxed">Equipment welding and structural custom metal work. Built to endure extreme conditions.</p>
+          <div class="h-[2px] w-0 group-hover:w-16 bg-[#ff8c00] mt-4 transition-all duration-500"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="py-16 md:py-28 px-5 md:px-8 bg-[#0a0a0a] relative" id="why-us">
+  <!-- Background accent -->
+  <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-[#ff8c00]/[0.02] rounded-full blur-[100px]"></div>
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-10 md:mb-20 reveal-up">
+      <span class="text-[#ff8c00] text-[11px] font-semibold tracking-[0.4em] uppercase font-body mb-3 md:mb-4 block">The CRS Difference</span>
+      <h2 class="font-headline text-4xl md:text-7xl text-white">WHY CHOOSE US</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="reveal-up why-card group p-6 md:p-8 border border-[#1a1a1a] hover:border-[#ff8c00]/30 transition-all duration-500 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-[#ff8c00]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="relative z-10">
+          <div class="w-14 h-14 border border-[#ff8c00]/30 flex items-center justify-center text-[#ff8c00] mb-5 md:mb-8 group-hover:bg-[#ff8c00] group-hover:text-black transition-all duration-500">
+            <span class="material-symbols-outlined text-3xl">emergency_home</span>
+          </div>
+          <h4 class="font-headline text-2xl text-white mb-4">24/7 EMERGENCY SUPPORT</h4>
+          <p class="text-[#777] text-sm leading-relaxed font-body">Mechanical failure doesn't wait for business hours. Neither do we. Rapid response dispatch across the region.</p>
+        </div>
+      </div>
+      <div class="reveal-up why-card group p-6 md:p-8 border border-[#1a1a1a] hover:border-[#ff8c00]/30 transition-all duration-500 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-[#ff8c00]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="relative z-10">
+          <div class="w-14 h-14 border border-[#ff8c00]/30 flex items-center justify-center text-[#ff8c00] mb-5 md:mb-8 group-hover:bg-[#ff8c00] group-hover:text-black transition-all duration-500">
+            <span class="material-symbols-outlined text-3xl">verified_user</span>
+          </div>
+          <h4 class="font-headline text-2xl text-white mb-4">CERTIFIED TECHNICIANS</h4>
+          <p class="text-[#777] text-sm leading-relaxed font-body">Our team holds advanced certifications in heavy engine diagnostics and high-pressure structural welding.</p>
+        </div>
+      </div>
+      <div class="reveal-up why-card group p-6 md:p-8 border border-[#1a1a1a] hover:border-[#ff8c00]/30 transition-all duration-500 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-[#ff8c00]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="relative z-10">
+          <div class="w-14 h-14 border border-[#ff8c00]/30 flex items-center justify-center text-[#ff8c00] mb-5 md:mb-8 group-hover:bg-[#ff8c00] group-hover:text-black transition-all duration-500">
+            <span class="material-symbols-outlined text-3xl">architecture</span>
+          </div>
+          <h4 class="font-headline text-2xl text-white mb-4">INDUSTRIAL PRECISION</h4>
+          <p class="text-[#777] text-sm leading-relaxed font-body">Laser-guided tools and shop-grade diagnostics in the field to ensure every bolt is torqued to spec.</p>
+        </div>
+      </div>
+      <div class="reveal-up why-card group p-6 md:p-8 border border-[#1a1a1a] hover:border-[#ff8c00]/30 transition-all duration-500 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-[#ff8c00]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="relative z-10">
+          <div class="w-14 h-14 border border-[#ff8c00]/30 flex items-center justify-center text-[#ff8c00] mb-5 md:mb-8 group-hover:bg-[#ff8c00] group-hover:text-black transition-all duration-500">
+            <span class="material-symbols-outlined text-3xl">bolt</span>
+          </div>
+          <h4 class="font-headline text-2xl text-white mb-4">RAPID RESPONSE</h4>
+          <p class="text-[#777] text-sm leading-relaxed font-body">Strategic staging and a mobile fleet optimized for the fastest arrival times in Battle Ground and Clark County.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Us -->
+<section class="relative py-16 md:py-32 overflow-hidden bg-[#0e0e0e]" id="about">
+  <div class="absolute right-0 top-0 w-1/3 h-full bg-[#151515] -skew-x-12 translate-x-1/2 opacity-40 hidden md:block"></div>
+  <div class="absolute left-0 bottom-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-[#ff8c00]/[0.03] rounded-full blur-[120px]"></div>
+  <div class="max-w-7xl mx-auto px-5 md:px-8 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 items-center">
+      <div>
+        <span class="reveal-up text-[#ff8c00] text-[11px] font-semibold tracking-[0.4em] uppercase font-body mb-4 md:mb-6 block">Our Story</span>
+        <h2 class="reveal-up font-headline text-5xl md:text-8xl text-white mb-8 md:mb-12 leading-[0.9]">THE<br/>ENGINEERED<br/><span class="text-[#ff8c00]">MONOLITH.</span></h2>
+        <div class="space-y-4 md:space-y-6 text-[#999] text-base md:text-lg leading-relaxed font-body reveal-up">
+          <p>CRS Inc. was founded on a singular principle: heavy industry requires an unshakeable foundation. For years, we have served as the backbone of Battle Ground's construction and heavy-duty sectors.</p>
+          <p>We don't just repair; we reinforce. Every weld, every engine overhaul, and every fleet maintenance schedule is executed with the meticulous detail of a blueprint.</p>
+          <p class="font-headline text-2xl text-white italic border-l-4 border-[#ff8c00] pl-6 my-8">"Built for the long haul.<br/>Engineered for permanence."</p>
+        </div>
+      </div>
+      <div class="relative reveal-up">
+        <div class="aspect-[4/5] bg-[#151515] relative overflow-hidden shadow-2xl shadow-black/50">
+          <img alt="Precision engineering tool close up" class="w-full h-full object-cover grayscale opacity-50 hover:opacity-70 hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcXYCOav_fCtQeFMyd49gbhuPcLVvryD_k2wXR60IYGGjbeW-OIcjo1pkeFtYiwf830vBUUR8zzH2y6c7GsDVrA2cEK18MPdc69YR3RBntOdBf6V9OOkRDhOmwsOzpCs7zZHB89iAq8JsCsRGXNGI_vvTmxkTLk_VLgMq5dZw7vtQH58n2vTpzUQOwMwJhldvLqfxCLKNs6vF0PhlltCxWAKct_AA4pFU9j2V2x5BmuTKjWeSfStb5GYN4czkYHFp3KLwBO6hGKcBd"/>
+          <div class="absolute inset-0 bg-[#ff8c00]/10 mix-blend-multiply"></div>
+        </div>
+        <div class="absolute -bottom-6 -left-6 bg-[#ff8c00] p-8 hidden md:block shadow-xl shadow-[#ff8c00]/20">
+          <p class="font-headline text-6xl text-black leading-none" data-counter="25">0</p>
+          <p class="font-body text-xs tracking-[0.3em] font-bold uppercase text-black/70 mt-1">Years Active</p>
+        </div>
+        <!-- Decorative frame -->
+        <div class="absolute -top-4 -right-4 w-24 h-24 border-t-2 border-r-2 border-[#ff8c00]/30 hidden md:block"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service Area -->
+<section class="py-16 md:py-28 px-5 md:px-8 bg-[#0a0a0a]">
+  <div class="max-w-7xl mx-auto">
+    <div class="bg-[#141414] border border-[#1e1e1e] p-6 md:p-16 flex flex-col md:flex-row gap-10 md:gap-16 items-center reveal-up">
+      <div class="flex-1">
+        <span class="text-[#ff8c00] text-[11px] font-semibold tracking-[0.4em] uppercase font-body mb-3 md:mb-4 block">Coverage Area</span>
+        <h2 class="font-headline text-4xl md:text-6xl text-white mb-6 md:mb-8">STRATEGIC COVERAGE</h2>
+        <p class="text-[#888] mb-6 md:mb-10 leading-relaxed font-body text-sm md:text-base">Based in Battle Ground, our mobile units span across Southwest Washington. We prioritize fleet accounts and construction zones within a 50-mile radius for immediate deployment.</p>
+        <ul class="space-y-5 font-headline text-white text-lg tracking-tight">
+          <li class="flex items-center gap-4 group"><span class="w-3 h-3 bg-[#ff8c00] group-hover:scale-125 transition-transform"></span> BATTLE GROUND</li>
+          <li class="flex items-center gap-4 group"><span class="w-3 h-3 border-2 border-[#ff8c00] group-hover:bg-[#ff8c00] transition-all"></span> VANCOUVER</li>
+          <li class="flex items-center gap-4 group"><span class="w-3 h-3 border-2 border-[#ff8c00] group-hover:bg-[#ff8c00] transition-all"></span> RIDGEFIELD</li>
+          <li class="flex items-center gap-4 group"><span class="w-3 h-3 border-2 border-[#ff8c00] group-hover:bg-[#ff8c00] transition-all"></span> CAMAS &amp; WASHOUGAL</li>
+        </ul>
+      </div>
+      <div class="flex-1 w-full aspect-video md:aspect-square bg-[#0e0e0e] overflow-hidden border border-[#1e1e1e] relative">
+        <img alt="Topographic map style background" class="w-full h-full object-cover opacity-20 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjbKDKpUWLi18OLbo0USCxiC8KBJ0do9H6-9aNEiC1w-F79DVMil0ufS4YLnjCGF6ZaSQr-LFRQu4ZYK17fc6EIUmcXC6xiC3iowkGf3DP035ssY1b6aj03vb6FSeK3E3FuUfFlTQKrnuCIjeD5mRQWtkEPYXqM3Itm9hWd9BAmZU4apzZd_eDrUZ7iNpDlqu7Io9gf7dTFNZcGHD3LZl3r7QHO7ZZEInhdZqoIBNoy_JPqd1PlaMKOMxM-7mvj3c7QcUFtq2H_9o2"/>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="relative">
+            <div class="absolute -inset-8 border border-[#ff8c00]/20 rounded-full animate-ping-slow"></div>
+            <div class="absolute -inset-4 border border-[#ff8c00]/30 rounded-full animate-pulse"></div>
+            <div class="w-4 h-4 bg-[#ff8c00] rounded-full relative z-10 shadow-lg shadow-[#ff8c00]/50"></div>
+          </div>
+        </div>
+        <!-- Grid overlay -->
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGxpbmUgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjQwIiBzdHJva2U9IiMyMjIiIHN0cm9rZS13aWR0aD0iMC41Ii8+PGxpbmUgeDE9IjAiIHkxPSIwIiB4Mj0iNDAiIHkyPSIwIiBzdHJva2U9IiMyMjIiIHN0cm9rZS13aWR0aD0iMC41Ii8+PC9zdmc+')] opacity-30"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-16 md:py-28 px-5 md:px-8 bg-[#0e0e0e]">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-10 md:mb-20 reveal-up">
+      <span class="text-[#ff8c00] text-[11px] font-semibold tracking-[0.4em] uppercase font-body mb-3 md:mb-4 block">Testimonials</span>
+      <h2 class="font-headline text-4xl md:text-7xl text-white">FIELD REPORTS</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Testimonial 1 -->
+      <div class="reveal-up bg-[#141414] border border-[#1e1e1e] p-6 md:p-10 relative group hover:border-[#ff8c00]/20 transition-all duration-500">
+        <div class="absolute top-6 right-8 font-headline text-7xl text-[#1a1a1a] group-hover:text-[#ff8c00]/10 transition-colors duration-500 leading-none">&ldquo;</div>
+        <div class="flex text-[#ff8c00] mb-6 gap-0.5">
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+        </div>
+        <p class="text-[#ccc] mb-10 leading-relaxed font-body relative z-10">"When our excavator went down on the Ridgefield site at 3 AM, CRS was there before dawn. Their mobile welding unit is second to none."</p>
+        <div class="border-t border-[#222] pt-6">
+          <p class="font-headline text-lg text-white">MARCUS VANCE</p>
+          <p class="font-body text-[10px] text-[#ff8c00] tracking-[0.3em] uppercase mt-1">Fleet Director, Terra-Form Construction</p>
+        </div>
+      </div>
+      <!-- Testimonial 2 -->
+      <div class="reveal-up bg-[#141414] border border-[#1e1e1e] p-6 md:p-10 relative group hover:border-[#ff8c00]/20 transition-all duration-500">
+        <div class="absolute top-6 right-8 font-headline text-7xl text-[#1a1a1a] group-hover:text-[#ff8c00]/10 transition-colors duration-500 leading-none">&ldquo;</div>
+        <div class="flex text-[#ff8c00] mb-6 gap-0.5">
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+        </div>
+        <p class="text-[#ccc] mb-10 leading-relaxed font-body relative z-10">"Clean shop, professional diagnostics, and honest pricing. We moved our entire fleet account to CRS and haven't looked back."</p>
+        <div class="border-t border-[#222] pt-6">
+          <p class="font-headline text-lg text-white">SARAH JENKINS</p>
+          <p class="font-body text-[10px] text-[#ff8c00] tracking-[0.3em] uppercase mt-1">Logistics Lead, PNW Hauling</p>
+        </div>
+      </div>
+      <!-- Testimonial 3 -->
+      <div class="reveal-up bg-[#141414] border border-[#1e1e1e] p-6 md:p-10 relative group hover:border-[#ff8c00]/20 transition-all duration-500">
+        <div class="absolute top-6 right-8 font-headline text-7xl text-[#1a1a1a] group-hover:text-[#ff8c00]/10 transition-colors duration-500 leading-none">&ldquo;</div>
+        <div class="flex text-[#ff8c00] mb-6 gap-0.5">
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+        </div>
+        <p class="text-[#ccc] mb-10 leading-relaxed font-body relative z-10">"Their fabrication work is structural art. They reinforced our custom trailers to withstand loads our previous shop couldn't handle."</p>
+        <div class="border-t border-[#222] pt-6">
+          <p class="font-headline text-lg text-white">DAVID CHEN</p>
+          <p class="font-body text-[10px] text-[#ff8c00] tracking-[0.3em] uppercase mt-1">Site Supervisor, Apex Engineering</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact / Quote Request -->
+<section class="py-16 md:py-28 px-5 md:px-8 bg-[#0a0a0a] relative" id="contact">
+  <div class="absolute top-0 left-0 md:left-1/3 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-[#ff8c00]/[0.02] rounded-full blur-[150px]"></div>
+  <div class="max-w-7xl mx-auto relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20">
+      <div class="reveal-up">
+        <span class="text-[#ff8c00] text-[11px] font-semibold tracking-[0.4em] uppercase font-body mb-4 md:mb-6 block">Get In Touch</span>
+        <h2 class="font-headline text-5xl md:text-7xl text-white mb-6 md:mb-10 leading-[0.9]">SECURE YOUR<br/><span class="text-[#ff8c00]">SUPPORT.</span></h2>
+        <p class="text-[#888] text-base md:text-lg mb-8 md:mb-14 font-body leading-relaxed">Submit your service request below. For emergency field repair, call the dispatcher directly.</p>
+        <div class="space-y-6 md:space-y-10">
+          <div class="flex gap-4 md:gap-6 items-start group">
+            <div class="w-10 h-10 md:w-12 md:h-12 border border-[#ff8c00]/30 flex items-center justify-center text-[#ff8c00] flex-shrink-0 group-hover:bg-[#ff8c00] group-hover:text-black transition-all duration-300">
+              <span class="material-symbols-outlined text-2xl">location_on</span>
+            </div>
+            <div>
+              <h4 class="font-headline text-lg text-white mb-1">HQ / SHOP</h4>
+              <p class="text-[#777] font-body">919 SE Grace Avenue<br/>Battle Ground, WA 98604</p>
+            </div>
+          </div>
+          <div class="flex gap-4 md:gap-6 items-start group">
+            <div class="w-10 h-10 md:w-12 md:h-12 border border-[#ff8c00]/30 flex items-center justify-center text-[#ff8c00] flex-shrink-0 group-hover:bg-[#ff8c00] group-hover:text-black transition-all duration-300">
+              <span class="material-symbols-outlined text-2xl">call</span>
+            </div>
+            <div>
+              <h4 class="font-headline text-lg text-white mb-1">24/7 DISPATCH</h4>
+              <p class="text-[#777] font-body">(360) 666-9654</p>
+            </div>
+          </div>
+          <div class="flex gap-4 md:gap-6 items-start group">
+            <div class="w-10 h-10 md:w-12 md:h-12 border border-[#ff8c00]/30 flex items-center justify-center text-[#ff8c00] flex-shrink-0 group-hover:bg-[#ff8c00] group-hover:text-black transition-all duration-300">
+              <span class="material-symbols-outlined text-2xl">mail</span>
+            </div>
+            <div>
+              <h4 class="font-headline text-lg text-white mb-1">EMAIL</h4>
+              <p class="text-[#777] font-body">info@crsmechanics.com</p>
+            </div>
+          </div>
+          <div class="flex gap-4 md:gap-6 items-start group">
+            <div class="w-10 h-10 md:w-12 md:h-12 border border-[#ff8c00]/30 flex items-center justify-center text-[#ff8c00] flex-shrink-0 group-hover:bg-[#ff8c00] group-hover:text-black transition-all duration-300">
+              <span class="material-symbols-outlined text-2xl">schedule</span>
+            </div>
+            <div>
+              <h4 class="font-headline text-lg text-white mb-1">SHOP HOURS</h4>
+              <p class="text-[#777] font-body">Mon-Fri 7:30 - 5:30<br/>Emergency Mobile Support: 24/7</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal-up bg-[#141414] border border-[#1e1e1e] p-5 md:p-12">
+        <h3 class="font-headline text-xl md:text-2xl text-white mb-6 md:mb-8">SERVICE REQUEST</h3>
+        <form class="space-y-6 md:space-y-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label class="font-body text-[10px] tracking-[0.3em] text-[#ff8c00] uppercase font-semibold">Contact Name</label>
+              <input class="w-full bg-transparent border-b-2 border-[#222] focus:border-[#ff8c00] text-white py-3 px-0 transition-all duration-300 placeholder:text-[#444] outline-none font-body" placeholder="John Doe" type="text"/>
+            </div>
+            <div class="space-y-2">
+              <label class="font-body text-[10px] tracking-[0.3em] text-[#ff8c00] uppercase font-semibold">Company Name</label>
+              <input class="w-full bg-transparent border-b-2 border-[#222] focus:border-[#ff8c00] text-white py-3 px-0 transition-all duration-300 placeholder:text-[#444] outline-none font-body" placeholder="Industrial Corp." type="text"/>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label class="font-body text-[10px] tracking-[0.3em] text-[#ff8c00] uppercase font-semibold">Phone</label>
+              <input class="w-full bg-transparent border-b-2 border-[#222] focus:border-[#ff8c00] text-white py-3 px-0 transition-all duration-300 placeholder:text-[#444] outline-none font-body" placeholder="(360) 000-0000" type="tel"/>
+            </div>
+            <div class="space-y-2">
+              <label class="font-body text-[10px] tracking-[0.3em] text-[#ff8c00] uppercase font-semibold">Service Required</label>
+              <select class="w-full bg-transparent border-b-2 border-[#222] focus:border-[#ff8c00] text-white py-3 px-0 transition-all duration-300 outline-none font-body cursor-pointer">
+                <option class="bg-[#141414]" value="">Select Service</option>
+                <option class="bg-[#141414]">Mobile Mechanic</option>
+                <option class="bg-[#141414]">Shop Repair</option>
+                <option class="bg-[#141414]">Metal Fabrication</option>
+                <option class="bg-[#141414]">Lube &amp; PM</option>
+              </select>
+            </div>
+          </div>
+          <div class="space-y-2">
+            <label class="font-body text-[10px] tracking-[0.3em] text-[#ff8c00] uppercase font-semibold">Project Details</label>
+            <textarea class="w-full bg-transparent border-b-2 border-[#222] focus:border-[#ff8c00] text-white py-3 px-0 transition-all duration-300 placeholder:text-[#444] outline-none resize-none font-body" placeholder="Describe the machinery or fabrication needs..." rows="4"></textarea>
+          </div>
+          <button class="w-full bg-[#ff8c00] text-black py-4 md:py-5 font-headline text-lg md:text-xl tracking-wider hover:bg-white transition-all duration-300 mt-2 md:mt-4 relative overflow-hidden group">
+            <span class="relative z-10">SEND SERVICE REQUEST</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-[#080808] border-t border-[#1a1a1a]">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <!-- Footer top -->
+    <div class="py-10 md:py-16 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+      <div class="col-span-2">
+        <div class="font-headline text-2xl md:text-3xl text-white mb-4">CRS INC. <span class="text-[#ff8c00]">MECHANICS</span></div>
+        <p class="text-[#555] font-body text-sm leading-relaxed max-w-md mb-6 md:mb-8">Full-spectrum mechanical support and fabrication for those who build the world. Based in Battle Ground, WA since 1998.</p>
+        <div class="flex gap-3">
+          <a href="tel:3606669654" class="w-10 h-10 border border-[#222] flex items-center justify-center text-[#888] hover:border-[#ff8c00] hover:text-[#ff8c00] transition-all duration-300">
+            <span class="material-symbols-outlined text-lg">call</span>
+          </a>
+          <a href="mailto:info@crsmechanics.com" class="w-10 h-10 border border-[#222] flex items-center justify-center text-[#888] hover:border-[#ff8c00] hover:text-[#ff8c00] transition-all duration-300">
+            <span class="material-symbols-outlined text-lg">mail</span>
+          </a>
+          <a href="#" class="w-10 h-10 border border-[#222] flex items-center justify-center text-[#888] hover:border-[#ff8c00] hover:text-[#ff8c00] transition-all duration-300">
+            <span class="material-symbols-outlined text-lg">location_on</span>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h5 class="font-headline text-lg text-white mb-6">SERVICES</h5>
+        <ul class="space-y-3 font-body text-sm text-[#555]">
+          <li><a href="#services" class="hover:text-[#ff8c00] transition-colors">Mobile Mechanic</a></li>
+          <li><a href="#services" class="hover:text-[#ff8c00] transition-colors">Mobile Lube</a></li>
+          <li><a href="#services" class="hover:text-[#ff8c00] transition-colors">Automotive Shop</a></li>
+          <li><a href="#services" class="hover:text-[#ff8c00] transition-colors">Metal Fabrication</a></li>
+          <li><a href="#services" class="hover:text-[#ff8c00] transition-colors">Emergency Repair</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-headline text-lg text-white mb-6">COMPANY</h5>
+        <ul class="space-y-3 font-body text-sm text-[#555]">
+          <li><a href="#about" class="hover:text-[#ff8c00] transition-colors">About Us</a></li>
+          <li><a href="#why-us" class="hover:text-[#ff8c00] transition-colors">Why CRS</a></li>
+          <li><a href="#contact" class="hover:text-[#ff8c00] transition-colors">Contact</a></li>
+          <li><a href="#" class="hover:text-[#ff8c00] transition-colors">Certifications</a></li>
+          <li><a href="#" class="hover:text-[#ff8c00] transition-colors">Safety Protocols</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Footer bottom -->
+    <div class="border-t border-[#151515] py-6 md:py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="font-body text-[10px] tracking-[0.3em] uppercase text-[#333]">
+        &copy; 2024 CRS INC. Engineered for permanence.
+      </p>
+      <div class="flex gap-8">
+        <a class="font-body text-[10px] tracking-[0.2em] uppercase text-[#333] hover:text-[#ff8c00] transition-colors" href="#">Privacy</a>
+        <a class="font-body text-[10px] tracking-[0.2em] uppercase text-[#333] hover:text-[#ff8c00] transition-colors" href="#">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="/main.js"></script>
+</body>
+</html>
